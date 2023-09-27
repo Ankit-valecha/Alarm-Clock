@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Title for the webpage -->
+  <title>Alarm Clock</title>
+  <!-- Linked Stylesheets for CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Page Title Section -->
+  <div class="page-title">
+    <!-- Heading for the page -->
+    <h1>ALARM CLOCK</h1>
+    <!-- Subtitle message -->
+    <span>(Kindly set your alarm in 24hr format, Thank you!!)</span>
+  </div>
+  <section>
+    <!-- Display Current Time Section -->
+    <div class="container">
+      <div class="current-time-container">
+        <!-- Current time will be displayed here (updated by JavaScript) -->
+        <div id="current-time"></div>
+      </div>
+
+      <!-- Set Alarm Section -->
+      <div class="setAlarm">
+        <div class="setAlarm-left">
+          <!-- Input Fields for Setting Time -->
+          <input type="number" min="0" max="23" required placeholder="Hrs" id="setAlarm-hour">
+          <input type="number" min="0" max="59" required placeholder="Min" id="setAlarm-min">
+          <input type="number" min="0" max="59" required placeholder="Sec" id="setAlarm-sec">
+          <!-- Select AM/PM -->
+          <select id="setAlarm-ampm">
+            <option value="AM/PM" selected hidden>AM/PM</option>
+            <option value="AM">AM</option>
+            <option value="PM">PM</option>
+          </select>
+        </div>
+        <!-- Set Alarm Button -->
+        <div class="setAlarm-right">
+          <!-- Button to set the alarm (linked to JavaScript function) -->
+          <button onclick="setAlarm()">Set Alarm</button>
+        </div>
+      </div>
+
+      <!-- Alarm List Section -->
+      <div class="setAlarm-delete">
+        <!-- Heading for Alarm List -->
+        <div class="setAlarm-delete-left">
+          <h3 class="alarm-heading">ALARMS</h3>
+        </div>
+        <div id="setAlarm-list">
+          <!-- Alarms will be displayed here (handled in JavaScript) -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Linked JavaScript File --> 
+  <script src="index.js"></script>
+</body>
+</html>
